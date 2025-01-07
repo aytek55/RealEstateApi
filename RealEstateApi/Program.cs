@@ -1,4 +1,7 @@
 
+using RealEstateApi.Models.DapperContext;
+using RealEstateApi.Repositories.CategoryRepository;
+
 namespace RealEstateApi
 {
     public class Program
@@ -9,6 +12,8 @@ namespace RealEstateApi
 
             // Add services to the container.
 
+            builder.Services.AddTransient<Context>();
+            builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
