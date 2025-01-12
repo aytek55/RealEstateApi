@@ -7,6 +7,11 @@ namespace RealEstateUI.ViewComponents.HomePage
     public class _DefaultProductListExploreCitiesComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
+
+        public IViewComponentResult Invoke()
+        {
+            return View();
+        }
         //private readonly ApiSetting _apiSetting;
         //public _DefaultProductListExploreCitiesComponentPartial(IHttpClientFactory httpClientFactory, IOptions<ApiSetting> apiSetting)
         //{

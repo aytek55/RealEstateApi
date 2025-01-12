@@ -1,4 +1,5 @@
-﻿@* @model List<ResultCategoryDto> *@
+﻿@using RealEstateUI.Dtos.CategoryDtos
+@model List<ResultCategoryDto>
 
 @{
 	ViewData["Title"] = "Index";
@@ -23,12 +24,12 @@
 					<form asp-action="PartialSearch" asp-controller="Default" class="w3l-cover-3-gd" method="post">
 						<input type="search" name="searchKeyValue" placeholder="Anahtar kelimeyi girin" required>
 						<span class="input-group-btn">
-							<select class="btn btn-default" name="propertyCategortyID" required>
-								@* @foreach (var item in Model)
+							@* <select class="btn btn-default" name="propertyCategortyID" required>
+								@foreach (var item in Model)
 								{
 									<option value="@item.CategoryID">@item.CategoryName</option>
-								} *@
-							</select>
+								}
+							</select> *@
 						</span>
 						<span class="input-group-btn">
 							<select class="btn btn-default" name="city" required>
