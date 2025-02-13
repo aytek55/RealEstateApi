@@ -24,12 +24,12 @@
 					<form asp-action="PartialSearch" asp-controller="Default" class="w3l-cover-3-gd" method="post">
 						<input type="search" name="searchKeyValue" placeholder="Anahtar kelimeyi girin" required>
 						<span class="input-group-btn">
-							@* <select class="btn btn-default" name="propertyCategortyID" required>
+							<select class="btn btn-default" name="propertyCategortyID" required>
 								@foreach (var item in Model)
 								{
 									<option value="@item.CategoryID">@item.CategoryName</option>
 								}
-							</select> *@
+							</select>
 						</span>
 						<span class="input-group-btn">
 							<select class="btn btn-default" name="city" required>
@@ -59,7 +59,7 @@
 
 @await Component.InvokeAsync("_DefaultWhoWeAreComponentPartial")
 
-@* @await Component.InvokeAsync("_DefaultBottomGridComponentPartial")
+@await Component.InvokeAsync("_DefaultBottomGridComponentPartial")
 
 @await Component.InvokeAsync("_DefaultProductListExploreCitiesComponentPartial")
 
@@ -69,4 +69,4 @@
 
 @await Component.InvokeAsync("_DefaultDiscountOfDayComponentPartial")
 
-@await Component.InvokeAsync("_DefaultBrandComponentPartial") *@
+@await Component.InvokeAsync("_DefaultBrandComponentPartial")

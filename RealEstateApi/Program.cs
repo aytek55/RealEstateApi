@@ -3,6 +3,7 @@ using RealEstateApi.Models.DapperContext;
 using RealEstateApi.Repositories.CategoryRepository;
 using RealEstateApi.Repositories.ProductRepository;
 using RealEstateApi.Repositories.ServiceRepository;
+using RealEstateApi.Repositories.TestimonialRepositories;
 using RealEstateApi.Repositories.WhoWeAreRepository;
 
 namespace RealEstateApi
@@ -20,6 +21,7 @@ namespace RealEstateApi
             builder.Services.AddTransient<IProductRepository, ProductRepository>();
             builder.Services.AddTransient<IWhoWeAreDetailRepository, WhoWeAreDetailRepository>();
             builder.Services.AddTransient<IServiceRepository, ServiceRepository>();
+            builder.Services.AddTransient<ITestimonialRepository, TestimonialRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
