@@ -12,13 +12,13 @@ namespace RealEstateApi.Repositories.BottomGridRepositories
 		{
 			_context = context;
 		}
-		public async Task CreateBottomGrid(CreateBottomGridDto createBattomGridDto)
+		public async Task CreateBottomGrid(CreateBottomGridDto createBottomGridDto)
 		{
 			string query = "insert into BottomGrid (Icon,Title,Description) values(@icon,@title,@description)";
 			var parameters = new DynamicParameters();
-			parameters.Add("@icon", createBattomGridDto.Icon);
-			parameters.Add("@title", createBattomGridDto.Title);
-			parameters.Add("@description", createBattomGridDto.Description);
+			parameters.Add("@icon", createBottomGridDto.Icon);
+			parameters.Add("@title", createBottomGridDto.Title);
+			parameters.Add("@description", createBottomGridDto.Description);
 			using (var connection = _context.CreateConnection())
 			{
 				await connection.ExecuteAsync(query, parameters);

@@ -15,7 +15,7 @@ namespace RealEstateUI.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("https://localhost:44333/api/WhoWeAreDetail");
+			var responseMessage = await client.GetAsync("https://localhost:7197/api/WhoWeAreDetail");
 			if (responseMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();
