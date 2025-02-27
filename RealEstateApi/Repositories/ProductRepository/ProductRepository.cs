@@ -9,7 +9,7 @@ using RealEstateApi.Dtos.ProductDtos;
 using RealEstateApi.Models.DapperContext;
 using RealEstateApi.Repositories.ProductRepository;
 
-namespace RealEstate_Dapper_Api.Repositories.ProductRepository
+namespace RealEstateApi.Repositories.ProductRepository
 {
 	public class ProductRepository : IProductRepository
 	{
