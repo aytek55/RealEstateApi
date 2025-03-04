@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealEstateUI.Dtos.EmployeeDtos;
+using RealEstateUI.Services;
 using System.Text;
 
 namespace RealEstateUI.Controllers
@@ -8,16 +9,16 @@ namespace RealEstateUI.Controllers
 	public class EmployeeController : Controller
 	{
 		private readonly IHttpClientFactory _httpClientFactory;
-		//private readonly ILoginService _loginService;
-		public EmployeeController(IHttpClientFactory httpClientFactory,/* ILoginService loginService,*/ IHttpContextAccessor contextAccessor)
+		private readonly ILoginService _loginService;
+		public EmployeeController(IHttpClientFactory httpClientFactory, ILoginService loginService, IHttpContextAccessor contextAccessor)
 		{
 			_httpClientFactory = httpClientFactory;
-			//_loginService = loginService;
+			_loginService = loginService;
 		}
 		public async Task<IActionResult> Index()
 		{
 			var user = User.Claims;
-			var userId = 1; //_loginService.GetUserId;
+			var userId = _loginService.GetUserId;
 
 
 			var token = User.Claims.FirstOrDefault(x => x.Type == "realestatetoken")?.Value;
