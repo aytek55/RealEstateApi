@@ -19,7 +19,7 @@ namespace RealEstateUI.ViewComponents.EstateAgent
         {
             var id = _loginService.GetUserId;
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:44333/api/EstateAgentLastProducts?id=" + id);
+            var responseMessage = await client.GetAsync("https://localhost:7197/api/EstateAgentLastProducts?id=" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

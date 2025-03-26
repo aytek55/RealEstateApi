@@ -1,13 +1,19 @@
 
 using RealEstateApi.Hubs;
 using RealEstateApi.Models.DapperContext;
+using RealEstateApi.Repositories.AppUserRepositories;
 using RealEstateApi.Repositories.BottomGridRepositories;
 using RealEstateApi.Repositories.BottomGridRepository;
 using RealEstateApi.Repositories.CategoryRepository;
 using RealEstateApi.Repositories.ContactRepositories;
 using RealEstateApi.Repositories.EmployeeRepositories;
+using RealEstateApi.Repositories.EstateAgentRepositories.DashboardRepositories.ChartRepositories;
+using RealEstateApi.Repositories.EstateAgentRepositories.DashboardRepositories.LastProductsRepositories;
+using RealEstateApi.Repositories.MessageRepositories;
 using RealEstateApi.Repositories.PopularLocationRepositories;
+using RealEstateApi.Repositories.ProductImageRepositories;
 using RealEstateApi.Repositories.ProductRepository;
+using RealEstateApi.Repositories.PropertyAmenityRepositories;
 using RealEstateApi.Repositories.ServiceRepository;
 using RealEstateApi.Repositories.StatisticsRepositories;
 using RealEstateApi.Repositories.TestimonialRepositories;
@@ -36,6 +42,11 @@ namespace RealEstateApi
             builder.Services.AddTransient<IStatisticsRepository, StatisticsRepository>();
             builder.Services.AddTransient<IContactRepository, ContactRepository>();
             builder.Services.AddTransient<IToDoListRepository, ToDoListRepository>();
+            builder.Services.AddTransient<IChartRepository, ChartRepository>();
+            builder.Services.AddTransient<ILast5ProductsRepository, Last5ProductsRepository>();
+            builder.Services.AddTransient<IMessageRepository, MessageRepository>();
+            builder.Services.AddTransient<IAppUserRepository, AppUserRepository>();
+            builder.Services.AddTransient<IPropertyAmenityRepository, PropertyAmenityRepository>();
 
 
 
