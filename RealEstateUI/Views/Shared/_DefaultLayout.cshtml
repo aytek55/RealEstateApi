@@ -13,7 +13,7 @@ Author URL: http://w3layouts.com
 
     <!--header-->
     @await Component.InvokeAsync("_NavbarViewComponentPartial")
-    <!--/header--> 
+    <!--/header-->
     <section class="w3l-about-breadcrumb">
         <div class="breadcrumb-bg breadcrumb-bg-about pt-5">
             <div class="container pt-lg-5 py-3">
@@ -25,10 +25,10 @@ Author URL: http://w3layouts.com
     @RenderBody()
     <!-- //contacts -->
     <!-- footers 20 -->
-    @* @await Component.InvokeAsync("_DefaultFooterComponentPartial") *@
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
 
     <!-- jQuery and Bootstrap JS -->
-    @* @await Component.InvokeAsync("_DefaultScriptComponentPartial") *@
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
 
 </body>
 
