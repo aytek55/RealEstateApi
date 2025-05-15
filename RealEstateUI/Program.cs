@@ -20,6 +20,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
 	opt.Cookie.SameSite = SameSiteMode.Strict;
 	opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
 	opt.Cookie.Name = "RealEstateJwt";
+
 });
 
 builder.Services.AddHttpContextAccessor();
